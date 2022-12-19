@@ -1,0 +1,26 @@
+<h1>newpage</h1>
+
+<h3>商品の登録</h3>
+<%= form_with model: @products do |form| %>
+<div>
+<%= form.label :"商品名" %><br>
+<%= form.text_field :product_name, placeholder: '商品名' %>
+</div>
+
+<div>
+<%= form.label :"価格" %><br>
+<%= form.text_field :price, placeholder: '価格' %>
+</div>
+
+<div>
+<%= form.label :"個数" %><br>
+<%= form.text_field :stock, placeholder: '個数' %>
+</div>
+
+<div>
+<%= form.label :"商品説明" %><br>
+<%= form.text_area :comment, placeholder: '説明' %>
+</div>
+
+<%= form.submit %>
+<% end %>
