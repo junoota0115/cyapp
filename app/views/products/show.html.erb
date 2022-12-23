@@ -1,8 +1,17 @@
 <h1>詳細</h1>
+
+<% if @product.image.attached? %>
+  <th><%= image_tag @product.image %>
+  <% else %>
+  <th><%= image_tag  'no_image' %>
+  <% end %>
+
+<%= image_tag product.image.variant(resize: '500x500'), class: 'product-image' %>
+
 <p>
  商品名：<br>
 <%= @product.product_name %>
-</p>
+</p> 
 
 <p>
 価格：<br>
@@ -19,4 +28,5 @@
 <%= @product.comment %>
 </p>
 
+<%= link_to '編集', edit_product_path(@product) %>
 <%= link_to '削除', product_path(@product), method: :delete, data: {confirm: "削除しますか？"}%>
