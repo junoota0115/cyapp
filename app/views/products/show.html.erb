@@ -5,6 +5,9 @@
   <% else %>
   <th><%= image_tag  'no_image' %>
   <% end %>
+
+<%= image_tag product.image.variant(resize: '500x500'), class: 'product-image' %>
+
 <p>
  商品名：<br>
 <%= @product.product_name %>
