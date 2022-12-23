@@ -1,6 +1,7 @@
 <h1>商品一覧</h1>
 <%= link_to 'ログアウト',  destroy_user_session_path, method: :delete%>
 <%= link_to '商品登録', new_product_path%>
+<%= render 'shared/search' %>
 <table>
 <tr>
   <th>id</th>
@@ -20,7 +21,12 @@
 <!--  <th><%= product.stock %>個</th>
   <th><%= product.comment %></th>
   <th><%= link_to '詳細', product_path(product)%></th>  -->
+  <% if product.image.attached? %>
+  <th><%= image_tag product.image.variant(resize: '100x100') %>
+  <% else %>
+  <th><%= image_tag 'no_image' %>
 <tr>
+<% end %>
 <% end %>
 
 </table>

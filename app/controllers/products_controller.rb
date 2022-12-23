@@ -30,16 +30,20 @@ class ProductsController < ApplicationController
     end
   end
 
-
-
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
     redirect_to root_path
   end
 
+  def search
+    @products = Product.search(params[:keyword])
+    @keyword = params[:keyword]
+    render "index"
+  end
+
   private
   def product_params
-    params.require(:product).permit(:product_name, :price, :stock, :comment)
+    params.require(:product).permit(:product_name, :price, :stock, :comment,:image)
   end
 end

@@ -1,8 +1,14 @@
 <h1>詳細</h1>
+
+<% if @product.image.attached? %>
+  <th><%= image_tag @product.image %>
+  <% else %>
+  <th><%= image_tag  'no_image' %>
+  <% end %>
 <p>
  商品名：<br>
 <%= @product.product_name %>
-</p>
+</p> 
 
 <p>
 価格：<br>
