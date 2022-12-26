@@ -9,26 +9,31 @@
   <% end %>
 <hr>
 
-
-<p>
+<div class="show-list">
+<ul>
+<li class="show-list1">
  商品名：<br>
 <%= @product.product_name %>
-</p> 
+</li><br>
 
-<p>
+<li class="show-list2">
 価格：<br>
 <%= @product.price %>
-</p>
+</li><br>
 
-<p>
+
+<li class="show-list3">
 個数：<br>
 <%= @product.stock %>
-</p>
+</li><br>
 
-<p>
+<li class="show-list4">
 説明：<br>
 <%= @product.comment %>
-</p>
+</li>
+</ul>
+</div>
+
 
 <hr>
 <%= link_to '編集', edit_product_path(@product) %>
