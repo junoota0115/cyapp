@@ -1,9 +1,15 @@
-<div class="header">
+<header>
+<div class="main-header">
 <div class="apptitle">
 <%= link_to 'CyApp', root_path %>
 </div>
 <div class="header-menu">
+<div class="heder-menu1">
 <%= link_to 'ログアウト',  destroy_user_session_path, method: :delete%>
+</div>
+<div class="heder-menu1">
 <%= link_to '商品登録', new_product_path%>
 </div>
 </div>
+</div>
+</header>

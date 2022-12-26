@@ -1,3 +1,5 @@
+<%= render 'shared/header' %>
+
 <h1>編集</h1>
 
 <h3>商品の登録</h3>
@@ -26,5 +28,5 @@
   <%= form.file_field :image, id:"product-image" %>
 </div>
 
-<%= form.submit %>
+<%= form.submit "update"%>
 <% end %>

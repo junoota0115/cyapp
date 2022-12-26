@@ -1,3 +1,5 @@
+<%= render 'shared/header' %>
+
 <h1>詳細</h1>
 
 <% if @product.image.attached? %>
@@ -5,7 +7,7 @@
   <% else %>
   <th><%= image_tag  'no_image' %>
   <% end %>
-
+<hr>
 
 
 <p>
@@ -28,5 +30,6 @@
 <%= @product.comment %>
 </p>
 
+<hr>
 <%= link_to '編集', edit_product_path(@product) %>
 <%= link_to '削除', product_path(@product), method: :delete, data: {confirm: "削除しますか？"}%>
