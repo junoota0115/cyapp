@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
     # @products = Product.all
-    @products = Product.page(params[:page]).per(5).order(:id)
+    @products = Product.page(params[:page]).per(5).order('id DESC')
   end
 
   def new
@@ -10,8 +10,11 @@ class ProductsController < ApplicationController
 
   def create
     @products = Product.new(product_params)
-    @products.save
+    if @products.save
     redirect_to root_path
+    else
+      render :new
+  end
   end
 
   def show
