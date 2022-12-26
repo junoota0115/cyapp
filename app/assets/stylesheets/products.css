@@ -1,0 +1,47 @@
+body {
+  color: #333;
+  margin: 0 auto;
+}
+
+.main-header{
+display: flex;
+
+}
+
+header a{
+  text-decoration: none;
+  color: black;
+  margin: 20px;
+}
+
+header{
+  width: 100%;
+  background-color: antiquewhite;
+}
+
+.apptitle{
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.header-menu{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin: 20px;
+}
+
+.header-menu a{
+  margin: 10px;
+}
+
+h1{
+  margin-left: 10px;
+}
+
+/* 検索フォーム */
+.search_form{
+  margin-left: 10px;
+}
+
