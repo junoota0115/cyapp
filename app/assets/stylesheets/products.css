@@ -45,3 +45,16 @@ h1{
   margin-left: 10px;
 }
 
+/* showページ */
+.show-list{
+  margin-left: 10px;
+}
+
+ul{
+  padding-left:0;
+  list-style: none;
+}
+
+.show-link{
+  margin-left: 10px;
+}
